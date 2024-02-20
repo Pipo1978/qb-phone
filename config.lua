@@ -2,8 +2,8 @@ Config = Config or {}
 Config.BillingCommissions = { -- This is a percentage (0.10) == 10%
     mechanic = 0.10
 }
-Config.Linux = false      -- True if linux
-Config.TweetDuration = 12 -- How many hours to load tweets (12 will load the past 12 hours of tweets)
+Config.Linux = linux      -- True if linux
+Config.TweetDuration = 48 -- How many hours to load tweets (12 will load the past 12 hours of tweets)
 Config.RepeatTimeout = 2000
 Config.CallRepeats = 10
 Config.OpenPhone = 244
@@ -150,7 +150,7 @@ Config.PhoneApplications = {
         app = 'camera',
         color = '#AC1D2C',
         icon = 'fas fa-camera',
-        tooltipText = 'Camera',
+        tooltipText = '',
         tooltipPos = 'bottom',
         job = false,
         blockedjobs = {},
@@ -165,6 +165,18 @@ Config.PhoneApplications = {
         job = 'police',
         blockedjobs = {},
         slot = 15,
+        Alerts = 0,
+    },
+    ["tuner"] = {
+        app = "tuner",
+        color = "white",
+        icon = "fas fa-circle",
+        style = "color:#c01d2e",
+        tooltipText = "Red Sun Tuner App",
+        tooltipPos = "bottom",
+        job = 'mechanic',
+        blockedjobs = {},
+        slot = 16,
         Alerts = 0,
     },
 }
