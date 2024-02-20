@@ -797,12 +797,12 @@ end)
 RegisterNetEvent('qb-phone:server:UpdateTweets', function(NewTweets, TweetData)
     local src = source
     if Config.Linux then
-        MySQL.insert('INSERT INTO phone_tweets (citizenid, firstName, lastName, message, date, url, picture, tweetid) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', {
+        MySQL.insert('INSERT INTO phone_tweets (citizenid, firstName, lastName, message, url, picture, tweetid) VALUES (?, ?, ?, ?, ?, ?, ?)', {
             TweetData.citizenid,
             TweetData.firstName,
             TweetData.lastName,
             TweetData.message,
-            TweetData.date,
+            --TweetData.date,
             TweetData.url:gsub('[%<>\"()\' $]', ''),
             TweetData.picture:gsub('[%<>\"()\' $]', ''),
             TweetData.tweetId
